@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration Form</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+
+            background-image: url('image.jpg'); 
+            background-size: cover; 
+            background-position: center;
+            /* animation: bgAnimation 10s infinite alternate; 
+            color: #333; */
+        }
+        h1 { 
+            color: #8a0404f9; 
+            text-align: left; 
+            margin: 20px; 
+        }
+        form {
+            width: 600px; 
+            margin: 20px; 
+            padding: 20px; 
+            border: 1px solid #ddd; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        }
+        fieldset { 
+            padding: 15px; 
+            margin-bottom: 20px; 
+            border-radius: 5px; 
+            border: none; 
+        }
+        legend { 
+            font-weight: bold; 
+            color: #6605f6; 
+        }
+        .form-group { 
+            display: flex; 
+            align-items: center; 
+            margin-bottom: 15px; 
+        }
+        label { 
+            flex: 1; 
+            font-weight: bold;
+            color: #010300e1; 
+        }
+        input, select, textarea { 
+            flex: 2; 
+            padding: 10px; 
+            border: 2px solid #ddd; 
+            border-radius: 25px; 
+            background: #fff; 
+            transition: 0.3s; 
+        }
+        input:focus, select:focus, textarea:focus { 
+            border-color: #07cbf3; 
+            box-shadow: 0 0 10px rgba(52, 192, 134, 0.5); 
+            transform: scale(1.05); 
+        }
+        button, input[type="reset"] { 
+            background-color: #e60bdf; 
+            color: rgb(38, 11, 11); 
+            padding: 10px 15px; 
+            border: none; 
+            border-radius: 25px; 
+            cursor: pointer; 
+            transition: 0.3s; 
+        }
+        button:hover, input[type="reset"]:hover { 
+            background-color: #45a049; 
+            transform: scale(1.1); 
+        }
+        textarea { 
+            resize: none; 
+            background-color: aquamarine;
+        }
+         @keyframes bgAnimation { 
+            0% { background: linear-gradient(120deg, #f4f4f9, #e0f7fa); }
+            50% { background: linear-gradient(120deg, #ffeb3b, #81d4fa); } 
+            100% { background: linear-gradient(120deg, #8bc34a, #c5e1a5); } 
+        } 
+    </style>
+</head>
+<body>
+    <h1>Skills Acadamy Form</h1>
+    <form>
+        <fieldset>
+            <legend>Personal Details</legend>
+            <div class="form-group"><label>First Name:</label><input type="text" name="FN" placeholder="Ex: cherry" maxlength="10" required></div>
+            <div class="form-group"><label>Surename:</label><input type="text" name="LN" placeholder="Ex: reddy" required></div>
+            <div class="form-group"><label>Mobile Number:</label><input type="tel" name="mob" placeholder="Ex: 8247697904" pattern="[0-9]{10}" required></div>
+            <div class="form-group"><label>Email:</label><input type="email" name="mail" placeholder="Ex: cherry@3026.net" required></div>
+            <div class="form-group"><label>Password:</label><input type="password" name="pwd" placeholder="min 5 characters" minlength="5" required></div>
+            <div class="form-group"><label>DOB:</label><input type="date" name="dob" required></div>
+            <div class="form-group"><label>Select Country:</label><select name="Country" required><option value="INDIA">INDIA</option><option value="USA">USA</option><option value="CHINA">CHINA</option></select></div>
+            <div class="form-group"><label>Upload Picture:</label><input type="file" name="pic" accept="image/*" required></div>
+            <input type="reset" value="Reset">
+        </fieldset>
+        <fieldset>
+            <legend>Course Details</legend>
+            <div class="form-group"><label>Select Course:</label><select name="Course" required><option value="PFS">JAVA FULL STACK</option><option value="JFS">Java Full Stack</option><option value="CJ">Core Java</option><option value="PDS">Python for Data Science</option></select></div>
+            <div class="form-group"><label>Delivery Mode:</label><input type="checkbox" name="mode1" value="ON"><label>ONLINE</label><input type="checkbox" name="mode2" value="OFF"><label>OFFLINE</label></div>
+            <div class="form-group"><label>Comments:</label><textarea name="comments" rows="4" placeholder="Enter your comments here"></textarea></div>
+        </fieldset>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
